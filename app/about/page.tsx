@@ -35,8 +35,7 @@ export default function AboutPage() {
     <main className="mx-auto max-w-3xl px-6 pt-20 pb-24">
       <h1 className="text-4xl font-bold">About</h1>
       <p className="mt-3 text-gray-600">
-        A quick look at my journey — studies, work and milestones. Major events
-        are highlighted; smaller events are shown as compact entries.
+        HERE U CAN SEE HOW SPCIAL I AM .
       </p>
 
       {/* Timeline vertical */}
@@ -107,20 +106,22 @@ export default function AboutPage() {
                   ].join(" ")}
                 >
                   {item.image && (
-                    <div
-                      className={[
-                        "relative mb-3 w-full overflow-hidden rounded-md",
-                        isMajor ? "h-56" : "h-40",
-                      ].join(" ")}
-                    >
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
+  <div
+    className={[
+      "relative mb-3 w-full overflow-hidden rounded-md",
+      isMajor ? "h-56" : "h-40",
+    ].join(" ")}
+  >
+    <Image
+      src={item.image}
+      alt={item.title}
+      fill
+      sizes="(max-width: 768px) 100vw, 768px"
+      unoptimized
+      className="object-cover"
+    />
+  </div>
+)}
 
                   <p className="text-gray-700 leading-relaxed">
                     {item.description}

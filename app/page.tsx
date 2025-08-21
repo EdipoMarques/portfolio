@@ -71,7 +71,7 @@ export default function Home() {
       href="/projects"
       className="inline-flex items-center rounded-lg border px-5 py-3 text-sm font-medium hover:bg-gray-50"
     >
-      View All Projects...
+      View All Projects
     </Link>
   </div>
 </section>

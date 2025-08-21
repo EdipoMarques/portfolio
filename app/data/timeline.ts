@@ -77,4 +77,16 @@ export const timeline: TimelineItem[] = [
     level: "minor",
     category: "talk",
   },
+  {
+    id: "2024-10-stech-fair",
+    dateLabel: "Oct 2024",
+    dateISO: "2025-10-15",
+    title: "First shift with Laura",
+    subtitle: "Talk: From Notebooks to Production",
+    description:
+      "Apresentei práticas de MLOps e conteinerização para levar modelos de notebooks a produção.",
+    tags: ["MLOps", "Docker"],
+    level: "minor",
+    category: "education",
+  },
 ];
