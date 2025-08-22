@@ -1,4 +1,4 @@
-// app/projects/page.tsx
+/// app/projects/page.tsx
 "use client";
 
 import { useMemo, useState } from "react";
@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const [q, setQ] = useState("");
   const [tag, setTag] = useState<string | "">("");
 
-  // ordena por data (mais recente primeiro)
+  // Ordena por data (mais recente primeiro)
   const ordered = useMemo(() => {
     return [...all].sort((a, b) => {
       const da = a.dateISO ? Date.parse(a.dateISO) : 0;
@@ -18,20 +18,28 @@ export default function ProjectsPage() {
     });
   }, []);
 
+  // Lista de tags únicas (seguro quando p.tags for undefined)
   const tags = useMemo(() => {
     const t = new Set<string>();
-    all.forEach((p) => p.tags.forEach((x) => t.add(x)));
+    all.forEach((p) => p.tags?.forEach((x) => t.add(x)));
     return Array.from(t).sort();
   }, []);
 
-  const filtered = ordered.filter((p) => {
-    const matchesQ =
-      !q ||
-      p.title.toLowerCase().includes(q.toLowerCase()) ||
-      p.description.toLowerCase().includes(q.toLowerCase());
-    const matchesTag = !tag || p.tags.includes(tag);
-    return matchesQ && matchesTag;
-  });
+  // Filtro por texto e por tag (seguros contra undefined)
+  const filtered = useMemo(() => {
+    const qLower = q.toLowerCase();
+
+    return ordered.filter((p) => {
+      const matchesQ =
+        !q ||
+        p.title.toLowerCase().includes(qLower) ||
+        (p.description ?? "").toLowerCase().includes(qLower);
+
+      const matchesTag = !tag || (p.tags ?? []).includes(tag);
+
+      return matchesQ && matchesTag;
+    });
+  }, [ordered, q, tag]);
 
   return (
     <main className="mx-auto max-w-4xl px-6 pt-20 pb-24">
@@ -67,6 +75,7 @@ export default function ProjectsPage() {
         {filtered.map((p) => (
           <ProjectCard key={p.slug} project={p} />
         ))}
+
         {filtered.length === 0 && (
           <p className="text-gray-600">No projects found.</p>
         )}

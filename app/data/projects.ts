@@ -2,11 +2,18 @@
 export type Project = {
   slug: string;
   title: string;
-  description: string;
-  dateISO?: string;        // para ordenar
-  tags: string[];
-  cover: string;           // /public/projects/...
-  images?: string[];       // galeria opcional
+  description?: string;
+
+  // Datas (opcional)
+  dateISO?: string;
+
+  // Imagens: aceite tanto 'image' quanto 'cover' (seu dataset usa 'cover')
+  image?: string;      // thumb principal, se você quiser usar esse nome no futuro
+  cover?: string;      // thumb principal como você usa hoje
+  cardImage?: string;  // alternativa (às vezes útil para cards)
+  images?: string[];   // galeria
+
+  tags?: string[];
   github?: string;
   demo?: string;
 };

@@ -1,7 +1,7 @@
 // app/projects/[slug]/page.tsx
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { projects } from "../../data/projects";
+import { projects, type Project } from "../../data/projects";
 
 type Props = { params: { slug: string } };
 
