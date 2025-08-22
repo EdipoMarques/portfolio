@@ -1,38 +1,41 @@
 // app/data/projects.ts
 export type Project = {
-  slug: string;          // id único do projeto
-  title: string;         // título
-  description: string;   // resumo
-  image: string;         // caminho dentro de /public (ex.: "/projects/proj1.png")
-  tech: string[];        // tags de tecnologias
-  github?: string;       // link opcional p/ GitHub
-  demo?: string;         // link opcional p/ demo/site
+  slug: string;
+  title: string;
+  description: string;
+  dateISO?: string;        // para ordenar
+  tags: string[];
+  cover: string;           // /public/projects/...
+  images?: string[];       // galeria opcional
+  github?: string;
+  demo?: string;
 };
 
 export const projects: Project[] = [
   {
-    slug: "fake-news-detector",
-    title: "Fake News Detector",
-    description: "LSTM + Word2Vec model to classify news credibility with F1 evaluation.",
-    image: "/projects/proj1.png",
-    tech: ["Python", "TensorFlow", "NLP"],
-    github: "https://github.com/SEU-USUARIO/fake-news-detector",
-    demo: "https://fake-news-demo.vercel.app"
+    slug: "nlp-support-bot",
+    title: "NLP Support Bot",
+    description:
+      "Assistente com RAG para base de conhecimento interna. Pipeline de embeddings, cache e avaliação.",
+    dateISO: "2025-06-10",
+    tags: ["Next.js", "TypeScript", "RAG", "OpenAI"],
+    cover: "/projects/nlp-bot-cover.jpg",
+    images: [
+      "/projects/nlp-bot-1.jpg",
+      "/projects/nlp-bot-2.jpg",
+    ],
+    github: "https://github.com/SEU_USUARIO/nlp-support-bot",
+    demo: "https://nlp-bot-demo.vercel.app",
   },
   {
-    slug: "pricing-analytics",
-    title: "Pricing Analytics Dashboard",
-    description: "dbt + BigQuery pipelines and a dashboard for price elasticity insights.",
-    image: "/projects/proj2.png",
-    tech: ["dbt", "BigQuery", "SQL", "Python"],
-    github: "https://github.com/SEU-USUARIO/pricing-analytics"
+    slug: "sales-dashboard",
+    title: "Sales Dashboard",
+    description:
+      "Dashboard de vendas com métricas de funil e previsão simples.",
+    dateISO: "2024-12-02",
+    tags: ["Next.js", "Tailwind", "Charts"],
+    cover: "/projects/sales-cover.jpg",
+    images: ["/projects/sales-1.jpg"],
+    github: "https://github.com/SEU_USUARIO/sales-dashboard",
   },
-  {
-    slug: "genai-notebooks",
-    title: "GenAI Notebooks",
-    description: "Prompt engineering experiments with retrieval and evaluation.",
-    image: "/projects/proj3.png",
-    tech: ["Python", "LangChain", "OpenAI"],
-    github: "https://github.com/SEU-USUARIO/genai-notebooks"
-  }
 ];

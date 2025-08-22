@@ -1,48 +1,75 @@
-import Image from "next/image";
-import { projects } from "../data/projects";
+// app/projects/page.tsx
+"use client";
 
-export const metadata = { title: "Projects | Édipo" };
+import { useMemo, useState } from "react";
+import ProjectCard from "../components/ProjectCard";
+import { projects as all } from "../data/projects";
 
 export default function ProjectsPage() {
+  const [q, setQ] = useState("");
+  const [tag, setTag] = useState<string | "">("");
+
+  // ordena por data (mais recente primeiro)
+  const ordered = useMemo(() => {
+    return [...all].sort((a, b) => {
+      const da = a.dateISO ? Date.parse(a.dateISO) : 0;
+      const db = b.dateISO ? Date.parse(b.dateISO) : 0;
+      return db - da;
+    });
+  }, []);
+
+  const tags = useMemo(() => {
+    const t = new Set<string>();
+    all.forEach((p) => p.tags.forEach((x) => t.add(x)));
+    return Array.from(t).sort();
+  }, []);
+
+  const filtered = ordered.filter((p) => {
+    const matchesQ =
+      !q ||
+      p.title.toLowerCase().includes(q.toLowerCase()) ||
+      p.description.toLowerCase().includes(q.toLowerCase());
+    const matchesTag = !tag || p.tags.includes(tag);
+    return matchesQ && matchesTag;
+  });
+
   return (
-    <main className="mx-auto max-w-4xl px-6 pt-20 pb-16">
-      <h1 className="text-4xl font-bold text-center">All Projects</h1>
-      <p className="mt-3 text-center text-gray-600">
-        Here you can explore all the projects I have been working on.
+    <main className="mx-auto max-w-4xl px-6 pt-20 pb-24">
+      <h1 className="text-4xl font-bold">Projects</h1>
+      <p className="mt-3 text-gray-600">
+        Explore my work. Filter by tag or search.
       </p>
 
-      <div className="mt-10 grid gap-8 sm:grid-cols-2">
-        {projects.map((p) => (
-          <article key={p.slug} className="rounded-xl border p-6 shadow hover:shadow-lg transition">
-            <div className="relative h-40 w-full overflow-hidden rounded-lg">
-              <Image src={p.image} alt={p.title} fill className="object-cover" />
-            </div>
+      {/* Controles */}
+      <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="Search projects…"
+          className="w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-black/70"
+        />
+        <select
+          value={tag}
+          onChange={(e) => setTag(e.target.value)}
+          className="rounded-lg border px-3 py-2"
+        >
+          <option value="">All tags</option>
+          {tags.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+      </div>
 
-            <h2 className="mt-4 text-xl font-semibold">{p.title}</h2>
-            <p className="mt-2 text-gray-600">{p.description}</p>
-
-            <div className="mt-3 flex flex-wrap gap-2">
-              {p.tech.map((t) => (
-                <span key={t} className="rounded-full border px-2 py-1 text-xs text-gray-600">
-                  {t}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-4 flex gap-4 text-sm">
-              {p.github && (
-                <a href={p.github} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
-                  GitHub
-                </a>
-              )}
-              {p.demo && (
-                <a href={p.demo} target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">
-                  Live Demo
-                </a>
-              )}
-            </div>
-          </article>
+      {/* Grid */}
+      <div className="mt-6 grid gap-6 sm:grid-cols-2">
+        {filtered.map((p) => (
+          <ProjectCard key={p.slug} project={p} />
         ))}
+        {filtered.length === 0 && (
+          <p className="text-gray-600">No projects found.</p>
+        )}
       </div>
     </main>
   );
