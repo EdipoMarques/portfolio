@@ -20,21 +20,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "nlp-support-bot",
-    title: "NLP Support Bot",
-    description:
-      "Assistente com RAG para base de conhecimento interna. Pipeline de embeddings, cache e avaliação.",
-    dateISO: "2025-06-10",
-    tags: ["Next.js", "TypeScript", "RAG", "OpenAI"],
-    cover: "/projects/nlp-bot-cover.jpg",
-    images: [
-      "/projects/nlp-bot-1.jpg",
-      "/projects/nlp-bot-2.jpg",
-    ],
-    github: "https://github.com/SEU_USUARIO/nlp-support-bot",
-    demo: "https://nlp-bot-demo.vercel.app",
-  },
-  {
     slug: "sales-dashboard",
     title: "Sales Dashboard",
     description:
@@ -45,4 +30,16 @@ export const projects: Project[] = [
     images: ["/projects/sales-1.jpg"],
     github: "https://github.com/SEU_USUARIO/sales-dashboard",
   },
+  {
+  slug: "nlp-support-bot",
+  title: "NLP Support Bot",
+  description: "...",
+  dateISO: "2025-06-10",
+  tags: ["Next.js", "TypeScript", "RAG", "OpenAI"],
+  cover: "/projects/nlp-bot-1.jpg",      // <-- usa um que existe
+  cardImage: "/projects/nlp-bot-1.jpg",  // opcional, deixa explícito o thumb
+  images: ["/projects/nlp-bot-1.jpg", "/projects/nlp-bot-2.jpg"],
+  github: "...",
+  demo: "..."
+}
 ];

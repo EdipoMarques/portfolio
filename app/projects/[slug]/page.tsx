@@ -1,40 +1,16 @@
 // app/projects/[slug]/page.tsx
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "../../data/projects";
-import Link from "next/link";
 
+type Props = { params: { slug: string } };
 
-type Params = { slug: string };
-
-export function generateStaticParams(): Params[] {
+export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
-  const { slug } = await params;
-  const p = projects.find((x) => x.slug === slug);
-  if (!p) return {};
-  return {
-    title: `${p.title} | Projects`,
-    description: p.description,
-    openGraph: {
-      title: p.title,
-      description: p.description,
-      images: p.cover ? [{ url: p.cover }] : undefined,
-    },
-  };
-}
-
-export default async function ProjectDetail({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
+export default async function ProjectDetail({ params }: Props) {
   const { slug } = await params;
   const p = projects.find((x) => x.slug === slug);
   if (!p) return notFound();
@@ -42,8 +18,8 @@ export default async function ProjectDetail({
   return (
     <main className="mx-auto max-w-3xl px-6 pt-20 pb-24">
       <Link href="/projects" className="text-sm text-gray-600 underline hover:opacity-80">
-  ← Back to projects
-</Link>
+        ← Back to projects
+      </Link>
 
       <h1 className="mt-2 text-3xl font-bold">{p.title}</h1>
       {p.dateISO && (
@@ -80,44 +56,21 @@ export default async function ProjectDetail({
       {(p.github || p.demo) && (
         <div className="mt-6 flex gap-4">
           {p.github && (
-            <a
-              href={p.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border px-4 py-2 underline hover:opacity-80"
-            >
+            <a href={p.github} target="_blank" rel="noopener noreferrer"
+               className="rounded-lg border px-4 py-2 underline hover:opacity-80">
               GitHub
             </a>
           )}
           {p.demo && (
-            <a
-              href={p.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg border px-4 py-2 underline hover:opacity-80"
-            >
+            <a href={p.demo} target="_blank" rel="noopener noreferrer"
+               className="rounded-lg border px-4 py-2 underline hover:opacity-80">
               Live Demo
             </a>
           )}
         </div>
       )}
 
-      {p.images?.length ? (
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {p.images.map((src) => (
-            <div key={src} className="relative h-48 w-full overflow-hidden rounded-lg">
-              <Image
-                src={src}
-                alt={`${p.title} screenshot`}
-                fill
-                className="object-cover"
-                sizes="(max-width:768px) 100vw, 50vw"
-                unoptimized
-              />
-            </div>
-          ))}
-        </div>
-      ) : null}
+      {/* Galeria removida */}
     </main>
   );
 }
