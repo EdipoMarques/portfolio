@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "../../data/projects";
+import Link from "next/link";
+
 
 type Params = { slug: string };
 
@@ -39,9 +41,9 @@ export default async function ProjectDetail({
 
   return (
     <main className="mx-auto max-w-3xl px-6 pt-20 pb-24">
-      <a href="/projects" className="text-sm text-gray-600 underline hover:opacity-80">
-        ← Back to projects
-      </a>
+      <Link href="/projects" className="text-sm text-gray-600 underline hover:opacity-80">
+  ← Back to projects
+</Link>
 
       <h1 className="mt-2 text-3xl font-bold">{p.title}</h1>
       {p.dateISO && (
