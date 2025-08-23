@@ -1,47 +1,45 @@
+// app/components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/posts", label: "Posts" },      // << novo link
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Navbar() {
   const pathname = usePathname();
 
-  const items = [
-    { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
-
-  const isActive = (href: string) =>
-    pathname === href || (href !== "/" && pathname.startsWith(href));
-
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        {/* Logo/Name */}
-        <Link href="/" className="text-lg font-semibold text-gray-800">
-          Édipo Marques | Portfolio
+    <header className="sticky top-0 z-30 border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-neutral-900/80 dark:border-neutral-800">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+        {/* Nome à esquerda */}
+        <Link href="/" className="text-base font-semibold tracking-tight hover:opacity-80">
+          Édipo Marques
         </Link>
 
-        {/* Menu */}
-        <ul className="flex items-center gap-6 text-sm">
-          {items.map((it) => (
-            <li key={it.href}>
-              <Link
-                href={it.href}
-                className={`transition-colors ${
-                  isActive(it.href)
-                    ? "text-black-600 font-semibold"
-                    : "text-gray-700 hover:text-blue-600"
-                }`}
-              >
-                {it.label}
-              </Link>
-            </li>
+        {/* Links à direita */}
+        <div className="flex items-center gap-1">
+          {nav.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`rounded-md px-3 py-2 text-sm transition ${
+                pathname === href
+                  ? "font-semibold underline underline-offset-4"
+                  : "text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-neutral-800"
+              }`}
+            >
+              {label}
+            </Link>
           ))}
-        </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </header>
   );
 }
