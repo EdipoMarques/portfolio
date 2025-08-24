@@ -20,7 +20,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
         {/* Nome à esquerda */}
         <Link href="/" className="text-base font-semibold tracking-tight hover:opacity-80">
-          Édipo Marques
+          Édipo Marques | Portfolio
         </Link>
 
         {/* Links à direita */}

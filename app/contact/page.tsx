@@ -24,7 +24,7 @@ export default function ContactPage() {
           LinkedIn
         </a>
         <a
-          href="https://github.com/SEU-USUARIO"
+          href="https://github.com/EdipoMarques"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"

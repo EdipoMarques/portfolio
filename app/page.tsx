@@ -47,9 +47,11 @@ export default function Home() {
           <div>
             <h2 className="text-3xl font-semibold">About Me</h2>
             <p className="mt-4 leading-relaxed text-gray-700">
-              I am a software engineer passionate about data, technology, and problem
-              solving. With international experience and a strong academic background,
-              I enjoy building solutions that combine creativity and analytics.
+              I’m a software engineer and recent MSc graduate with a research background and a data-analysis internship. 
+              During my master’s, I deepened my foundations in building and evaluating machine learning solutions, 
+              applying AI and data concepts to projects. Earlier, I collaborated as a research assistant while completing a BSc 
+              in Industrial Engineering. I’m now focused on applying this toolkit in the IT industry shipping 
+              reliable software and creating measurable impact.
             </p>
           </div>
 

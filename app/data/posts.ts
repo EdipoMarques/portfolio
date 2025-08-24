@@ -42,7 +42,7 @@ export const posts: Post[] = [
   },
   {
     slug: "n26-2025",
-    title: "Talk26: AI Platform at N26",
+    title: "Attended Talk26: AI Platform at N26",
     dateISO: "2025-06-26",
     excerpt: "Networking + great talks on AI safety and tooling.",
     image: "/posts/n26.jpg",
@@ -67,9 +67,10 @@ export const posts: Post[] = [
   image: "/posts/portfolio-launch.jpg",
   tags: ["Next.js", "TypeScript", "Vercel", "Portfolio"],
   content: [
-    "I’ve just launched the first version of my personal portfolio at edipomarques.io. The site showcases selected projects, a clean About timeline, and a lightweight “Recent Posts” feed.",
-    "Under the hood: Next.js (App Router) + TypeScript, Tailwind CSS, and a data-driven content model. Deployments are automated via Git + Vercel on every push.",
-    "Roadmap: dark mode, richer project pages (live demos & technical write-ups), and a simple content workflow so posting updates is even faster."
+    "My portfolio is now live, a single place to browse projects, recent posts, and contact details.",
+    "The goal is clarity and a professional overview of what I build and how I work.",
+    "Built with Next.js and TypeScript, styled with Tailwind, deployed on Vercel.",
+    "I’ll keep it current as new work ships."
   ]
 }
 
