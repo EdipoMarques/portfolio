@@ -28,11 +28,11 @@ export const timeline: TimelineItem[] = [
     dateLabel: "Mar 2024",
     dateISO: "2024-03-01",
     title: "Started M.Sc. in Software Engineering",
-    subtitle: "University XYZ",
+    subtitle: "University of Europe for Applied Sciences",
     description:
       "Kick-off do mestrado com foco em estatística, machine learning e engenharia de dados.",
     image: "/timeline/msc-start.jpg",
-    tags: ["M.Sc.", "Statistics", "Python"],
+    tags: ["M.Sc.", "Software Engineering", "Python", "AI"],
     level: "major",
     category: "education",
   },
@@ -53,11 +53,11 @@ export const timeline: TimelineItem[] = [
     dateLabel: "Aug 2025",
     dateISO: "2025-08-20",
     title: "M.Sc. Graduation",
-    subtitle: "Thesis on Generative AI for Document QA",
+    subtitle: "Thesis on Generative AI - Fake News detector applying NPL and machine learning techniques",
     description:
-      "Tese aplicando RAG e avaliação para bases corporativas. Pipeline end-to-end e benchmark.",
+      "Fake News detector applying NPL and machine learning techniques.",
     image: "/timeline/msc-grad.jpg",
-    tags: ["Generative AI", "RAG", "Evaluation"],
+    tags: ["Generative AI", "NPL", "Evaluation"],
     links: [
       { label: "Thesis (PDF)", url: "https://example.com/thesis.pdf" },
       { label: "GitHub", url: "https://github.com/seu-usuario/msc-thesis" },
