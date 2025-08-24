@@ -24,7 +24,7 @@ export const projects: Project[] = [
     title: "CRUD To-Do List Application",
     description: "A small full-stack app that demonstrates Create, Read, Update and Delete for tasks. I focused on clean code, end-to-end typing, and a straightforward UX: open tasks appear on top, completed ones at the bottom. Data is kept in memory (per the challenge), but the code is structured to plug in a database later.",
     dateISO: "2024-12-02",
-    tags: ["Next.js", "Tailwind", "Charts"],
+    tags: ["CRUD", "Node.js", "HTML/CSS", "Full-Stack"],
     cover: "/projects/crudproject.png",
     images: ["/projects/crudproject.png"],
     github: "https://github.com/EdipoMarques/todoProject",
