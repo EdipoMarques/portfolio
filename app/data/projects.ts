@@ -26,8 +26,8 @@ export const projects: Project[] = [
       "Dashboard de vendas com métricas de funil e previsão simples.",
     dateISO: "2024-12-02",
     tags: ["Next.js", "Tailwind", "Charts"],
-    cover: "/projects/sales-cover.jpg",
-    images: ["/projects/sales-1.jpg"],
+    cover: "/projects/crudproject.png",
+    images: ["/projects/crudproject.png"],
     github: "https://github.com/SEU_USUARIO/sales-dashboard",
   },
   {
@@ -48,9 +48,9 @@ export const projects: Project[] = [
   description: "...",
   dateISO: "2025-07-10",
   tags: ["Next.js", "TypeScript", "RAG", "OpenAI"],
-  cover: "/projects/crudproject.png",      // <-- usa um que existe
-  cardImage: "/projects/crudproject.png",  // opcional, deixa explícito o thumb
-  images: ["/projects/crudproject.png", "/projects/crudproject.png"],
+  cover: "/projects/portfolio-launch.png",      // <-- usa um que existe
+  cardImage: "/projects/portfolio-launch.png",  // opcional, deixa explícito o thumb
+  images: ["/projects/portfolio-launch.png", "/projects/portfolio-launch.png"],
   github: "...",
   demo: "..."
 }
