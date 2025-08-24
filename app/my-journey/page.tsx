@@ -3,7 +3,7 @@ import Image from "next/image";
 import { timeline } from "../data/timeline";
 import { hobbies } from "../data/hobbies";
 
-export const metadata = { title: "About | Édipo" };
+export const metadata = { title: "My Journey | Édipo" };
 
 function accentFor(category?: string) {
   // cores por categoria (ajuste à vontade)
@@ -33,7 +33,7 @@ export default function AboutPage() {
 
   return (
     <main className="mx-auto max-w-3xl px-6 pt-20 pb-24">
-      <h1 className="text-4xl font-bold">About</h1>
+      <h1 className="text-4xl font-bold">My journey</h1>
       <p className="mt-3 text-gray-600">
         A quick look at my journey, studies, work and milestones. Major events
         are highlighted; smaller events are shown as compact entries.
