@@ -39,12 +39,12 @@ export const timeline: TimelineItem[] = [
   {
     id: "2024-10-tech-fair-",
     dateLabel: "Oct 2024",
-    dateISO: "2024-10-15",
-    title: "Tech Fair Speakers",
-    subtitle: "Talk: From Notebooks to Production",
+    dateISO: "2025-06-26",
+    title: "Talk26 at N26",
+    subtitle: "Attended Talk26: AI Platform at N26",
     description:
-      "Apresentei práticas de MLOps e conteinerização para levar modelos de notebooks a produção.",
-    tags: ["MLOps", "Docker"],
+      "Attended Talk26: Building a Compliant and Reliable AI Platform at N26 in Berlin.",
+    tags: ["AI", "Finance", "Data Science"],
     level: "minor",
     category: "other",
   },
