@@ -27,7 +27,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Tailwind", "Charts"],
     cover: "/projects/crudproject.png",
     images: ["/projects/crudproject.png"],
-    github: "https://github.com/SEU_USUARIO/sales-dashboard",
+    github: "https://github.com/EdipoMarques/todoProject",
   },
   {
   slug: "fake-news-detector",
