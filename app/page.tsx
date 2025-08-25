@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         <h1 className="mt-8 text-5xl font-bold tracking-tight">
-          Hi, I am Édipo :)
+          Hi, I am Édipo and christian is a fucking BASTARD:)
         </h1>
 
         <p className="mt-3 text-lg text-gray-600">
