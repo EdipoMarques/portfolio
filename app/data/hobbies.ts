@@ -30,20 +30,6 @@ export const hobbies: Hobby[] = [
     emoji: "🚴",
   },
   {
-    id: "camping",
-    name: "Camping",
-    description:
-      "Connecting with nature and embracing outdoor adventures.",
-    emoji: "🏕️",
-  },
-  {
-    id: "boating",
-    name: "Boating",
-    description:
-      "Making waves and enjoying water activities.",
-    emoji: "⛵",
-  },
-  {
     id: "traveling",
     name: "Traveling",
     description:

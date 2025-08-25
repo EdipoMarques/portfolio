@@ -13,7 +13,7 @@ export type Education = {
 export const education: Education[] = [
   {
     id: "msc",
-    school: "Your University",
+    school: "University of Europe for Applied Sciences",
     degree: "MSc in Software Engineering",
     startISO: "2024-03-01",
     endISO: "2025-08-31",
@@ -26,10 +26,10 @@ export const education: Education[] = [
   },
   {
     id: "bsc",
-    school: "Your University",
+    school: "Federal University of Pernambuco",
     degree: "BSc in Industrial Engineering",
-    startISO: "2018-02-01",
-    endISO: "2022-12-01",
+    startISO: "2015-02-01",
+    endISO: "2021-12-01",
     location: "Brazil",
     highlights: [
       "Research assistant during the program.",

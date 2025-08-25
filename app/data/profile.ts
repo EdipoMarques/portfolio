@@ -49,5 +49,12 @@ export const certifications: Certification[] = [
     year: 2024,
     file: "/certs/ibm-data-practitioner.pdf", // coloque o PDF em /public/certs/
   },
+  {
+    id: "IBM-data",
+    title: "Introduction to Data Analytics",
+    issuer: "IBM",
+    year: 2024,
+    file: "/certs/ibm-analytics-practitioner.pdf", // coloque o PDF em /public/certs/
+  },
   // { id: "coursera-ml", title: "Machine Learning Specialization", issuer: "Coursera/Stanford", year: 2023, file: "/certs/ml-specialization.pdf" },
 ];
