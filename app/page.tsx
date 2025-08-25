@@ -45,7 +45,7 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-2">
           {/* About à esquerda */}
           <div>
-            <h2 className="text-3xl font-semibold">About Me</h2>
+            <h2 className="text-3xl font-semibold">About me</h2>
             <p className="mt-4 leading-relaxed text-gray-700">
               I’m a software engineer and recent MSc graduate with a research background and a data-analysis internship. 
               During my master’s, I deepened my foundations in building and evaluating machine learning solutions, 
