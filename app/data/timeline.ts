@@ -30,7 +30,7 @@ export const timeline: TimelineItem[] = [
     title: "Started M.Sc. in Software Engineering",
     subtitle: "University of Europe for Applied Sciences",
     description:
-      "Kick-off do mestrado com foco em estatística, machine learning e engenharia de dados.",
+      "Kick-off of my Master's program focusing on AI concepts, machine learning, and data engineering.",
     image: "/timeline/msc-start.jpg",
     tags: ["M.Sc.", "Software Engineering", "Python", "AI"],
     level: "major",
