@@ -225,7 +225,7 @@ export default function AboutPage() {
           <section className="mt-12">
             <h2 className="text-2xl font-semibold">Résumé</h2>
             <p className="mt-2 text-gray-700">
-              You can find more details in my résumé.
+              You can find more details in my CV.
             </p>
             <div className="mt-3">
               <Link
@@ -233,7 +233,7 @@ export default function AboutPage() {
                 target="_blank"
                 className="inline-flex items-center rounded-lg border px-4 py-2 hover:bg-gray-50"
               >
-                Download résumé
+                Download CV
               </Link>
             </div>
           </section>

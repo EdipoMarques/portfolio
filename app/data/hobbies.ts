@@ -9,25 +9,22 @@ export type Hobby = {
 
 export const hobbies: Hobby[] = [
   {
-    id: "freestyle-skiing",
-    name: "Freestyle Skiing",
-    description:
-      "Passionate about pushing boundaries and perfecting technique on the slopes.",
-    emoji: "⛷️",
+  id: "football",             // use ids únicos
+  name: "Football (Soccer)",  // ou "Futebol"
+  description: "Playing pickup games and following European leagues.",
+  emoji: "⚽",
   },
   {
-    id: "hiking",
-    name: "Hiking",
-    description:
-      "Exploring beautiful trails and mountain ranges, always looking for a new view.",
-    emoji: "⛰️",
+  id: "rugby",
+  name: "Rugby",
+  description: "Enjoying the physical team game and its strategy.",
+  emoji: "🏉",
   },
   {
-    id: "road-biking",
-    name: "Road Biking",
-    description:
-      "Enjoying scenic routes while keeping an active lifestyle.",
-    emoji: "🚴",
+  id: "swimming",
+  name: "Swimming",
+  description: "Lap swimming to stay active and clear the mind.",
+  emoji: "🏊‍♂️", // ou "🏊‍♀️" / "🏊"
   },
   {
     id: "traveling",
