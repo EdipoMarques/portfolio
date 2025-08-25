@@ -26,28 +26,28 @@ export const languages: Language[] = [
 ];
 
 export const hardSkills: SkillGroup[] = [
-  { group: "Programming", items: ["TypeScript", "Python", "C"] },
+  { group: "Programming", items: ["Java", "SQL", "Python", "C"] },
   { group: "Frameworks", items: ["Next.js", "React", "Express"] },
   { group: "Data/ML", items: ["Pandas", "TensorFlow", "NLP"] },
-  { group: "Tools", items: ["Git", "Vercel", "Docker (basics)"] },
+  { group: "Tools", items: ["Git", "Vercel"] },
 ];
 
 export const softSkills: string[] = [
   "Communication",
   "Problem solving",
   "Teamwork",
-  "Ownership",
+  "Ownership Mindset",
   // adicione outras
 ];
 
 export const certifications: Certification[] = [
   // Exemplo — substitua pelos seus
   {
-    id: "aws-cloud-practitioner",
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "AWS",
+    id: "IBM-data-practitioner",
+    title: "Data Analysis with Python",
+    issuer: "IBM",
     year: 2024,
-    file: "/certs/aws-cloud-practitioner.pdf", // coloque o PDF em /public/certs/
+    file: "/certs/ibm-data-practitioner.pdf", // coloque o PDF em /public/certs/
   },
   // { id: "coursera-ml", title: "Machine Learning Specialization", issuer: "Coursera/Stanford", year: 2023, file: "/certs/ml-specialization.pdf" },
 ];

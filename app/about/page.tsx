@@ -1,10 +1,10 @@
 // app/about/page.tsx
 import Link from "next/link";
-import Image from "next/image";
 import ProfileSidebar from "../components/ProfileSidebar";
 import { hobbies } from "../data/hobbies";
+import { education } from "../data/education"; // mantém
 
-// Types locais (mantém como estavam, se você já tinha)
+// Types locais
 type Work = {
   company: string;
   role: string;
@@ -21,7 +21,7 @@ type Academic = {
   tags?: string[];
 };
 
-// Seus dados (ajuste/extraia para data/ se preferir)
+// Seus dados
 const work: Work[] = [
   {
     company: "Your Company / Lab",
@@ -48,8 +48,7 @@ const work: Work[] = [
 
 const academic: Academic[] = [
   {
-    title:
-      "MSc Thesis — Retrieval-Augmented Generation for Customer Support",
+    title: "MSc Thesis — Retrieval-Augmented Generation for Customer Support",
     year: 2025,
     link: "/posts/master-thesis-finished",
     summary:
@@ -92,15 +91,63 @@ export default function AboutPage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 pt-20 pb-24">
-      {/* Grid com sidebar à esquerda no desktop */}
-      <div className="grid gap-8 lg:grid-cols-[280px_1fr]">
-        {/* Sidebar */}
+      {/* Cabeçalho centralizado fora do grid */}
+      <header className="text-center">
+        <h1 className="text-4xl font-bold">About</h1>
+        <p className="mx-auto mt-4 max-w-3xl text-gray-700 leading-relaxed">
+          {bio}
+        </p>
+      </header>
+
+      {/* Agora iniciamos o grid: sidebar à esquerda e conteúdo à direita.
+          Como o título/bio ficaram fora, a sidebar começa alinhada a Education. */}
+      <div className="mt-12 grid gap-8 lg:grid-cols-[280px_1fr]">
+        {/* Sidebar (continua sticky, mas “começa” mais abaixo) */}
         <ProfileSidebar />
 
-        {/* Conteúdo principal (o que você já tinha) */}
+        {/* Conteúdo principal */}
         <div>
-          <h1 className="text-4xl font-bold">About</h1>
-          <p className="mt-4 text-gray-700 leading-relaxed">{bio}</p>
+          {/* Education — no topo desta coluna */}
+          <section className="mt-0">
+            <h2 className="text-2xl font-semibold text-center lg:text-left">
+              Education
+            </h2>
+            <div className="mt-4 grid gap-4">
+              {education.map((e) => (
+                <div key={e.id} className="rounded-lg border p-4">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                    <div>
+                      <h3 className="font-semibold">{e.degree}</h3>
+                      <p className="text-gray-700">{e.school}</p>
+                    </div>
+                    <p className="text-sm text-gray-500">
+                      {fmtRange(e.startISO, e.endISO)}
+                      {e.location ? ` • ${e.location}` : ""}
+                    </p>
+                  </div>
+
+                  {e.highlights?.length ? (
+                    <ul className="mt-3 list-disc pl-5 text-gray-700 space-y-1">
+                      {e.highlights.map((h, i) => (
+                        <li key={i}>{h}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+
+                  {e.link && (
+                    <div className="mt-2">
+                      <Link
+                        href={e.link}
+                        className="text-sm underline decoration-gray-300 underline-offset-4 hover:opacity-80"
+                      >
+                        More details
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Experience */}
           <section className="mt-12">
@@ -182,7 +229,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-3">
               <Link
-                href="/resume.pdf" // coloque o arquivo em /public/resume.pdf
+                href="/resume.pdf"
                 target="_blank"
                 className="inline-flex items-center rounded-lg border px-4 py-2 hover:bg-gray-50"
               >
@@ -191,7 +238,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Hobbies — fica no final */}
+          {/* Hobbies — final da página */}
           <section className="mt-16">
             <h2 className="text-2xl font-semibold">Hobbies</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
