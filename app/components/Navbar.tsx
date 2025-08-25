@@ -9,6 +9,7 @@ const nav = [
   { href: "/projects", label: "Projects" },
   { href: "/posts", label: "Posts" },
   { href: "/my-journey", label: "My Journey" }, // <-- aqui!
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 

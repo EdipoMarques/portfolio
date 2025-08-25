@@ -51,13 +51,13 @@ export const timeline: TimelineItem[] = [
   {
     id: "2025-08-msc-grad",
     dateLabel: "Aug 2025",
-    dateISO: "2025-08-20",
+    dateISO: "2025-08-14",
     title: "M.Sc. Graduation",
-    subtitle: "Thesis on Generative AI - Fake News detector applying NPL and machine learning techniques",
+    subtitle: "I have submitted my thesis on Generative AI - Fake News detector applying NPL and machine learning techniques",
     description:
       "Fake News detector applying NPL and machine learning techniques.",
     image: "/timeline/msc-grad.jpg",
-    tags: ["Generative AI", "NPL", "Evaluation"],
+    tags: ["Generative AI", "NPL", "ML"],
     links: [
       { label: "Thesis (PDF)", url: "https://example.com/thesis.pdf" },
       { label: "GitHub", url: "https://github.com/seu-usuario/msc-thesis" },
