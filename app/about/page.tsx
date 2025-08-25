@@ -87,7 +87,7 @@ export const metadata = {
 
 export default function AboutPage() {
   const bio =
-    "I’m a software engineer and recent MSc graduate with a research background and a data-analysis internship. During my Master’s I strengthened my foundations in building and evaluating machine-learning solutions and applied AI/Data concepts across projects. Earlier I collaborated as a research assistant while completing a BSc in Industrial Engineering. I’m now focused on applying this toolkit in industry to ship reliable software and create measurable impact.";
+    "Engineer who has worked with data management and classification in the real world. Proactive, committed to continuous learning and knowledge sharing, and open to embracing new technologies. Earlier I collaborated as a research assistant while completing a BSc in Industrial Engineering. I’m now focused on applying this toolkit in IT industry to apply my knowledge and create measurable impact";
 
   return (
     <main className="mx-auto max-w-5xl px-6 pt-20 pb-24">
