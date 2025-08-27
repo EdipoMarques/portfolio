@@ -27,7 +27,7 @@ export const education: Education[] = [
   {
     id: "bsc",
     school: "Federal University of Pernambuco",
-    degree: "BSc in Industrial Engineering",
+    degree: "BSc in Production Engineering",
     startISO: "2015-02-01",
     endISO: "2021-12-01",
     location: "Brazil",

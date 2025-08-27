@@ -24,24 +24,15 @@ type Academic = {
 // Seus dados
 const work: Work[] = [
   {
-    company: "Your Company / Lab",
-    role: "Software Engineer / Research Assistant",
-    startISO: "2024-02-01",
-    location: "Berlin, DE",
-    bullets: [
-      "Built and maintained web features used by real users.",
-      "Collaborated with researchers/engineers on ML/NLP prototypes.",
-    ],
-  },
-  {
-    company: "Internship – Data Analysis",
+    company: "SRH Hochschulen ",
     role: "Data Analyst Intern",
-    startISO: "2022-06-01",
-    endISO: "2022-09-01",
+    startISO: "2024-05-24",
+    endISO: "2024-11-24",
     location: "Berlin, DE",
     bullets: [
-      "Exploratory analysis and dashboards to support decisions.",
-      "Automated small data tasks to speed up reporting.",
+      "Collaborated with teams from different departments to make sure the data was correct, give useful business insights, and help people make decisions.",
+      "Applied SQL and Python for data exploration and analysis.",
+      "Used Google Cloud Platform to work with datasets, which made the workflow 10% more efficient.",  
     ],
   },
 ];
