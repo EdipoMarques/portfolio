@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
   slug: "fake-news-detector",
   title: "Fake news Detector",
-  description: "Fake-news detector using NLP and Deep learning techniques.",
+  description: "Updates coming soon..",
   dateISO: "2025-06-10",
   tags: ["Next.js", "TypeScript", "RAG", "OpenAI"],
   cover: "/projects/nlp-bot-1.jpg",      // <-- usa um que existe
