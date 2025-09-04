@@ -214,7 +214,7 @@ export default function AboutPage() {
 
           {/* Resume */}
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold">Résumé</h2>
+            <h2 className="text-2xl font-semibold">CV</h2>
             <p className="mt-2 text-gray-700">
               You can find more details in my CV.
             </p>
