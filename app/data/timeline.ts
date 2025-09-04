@@ -77,4 +77,17 @@ export const timeline: TimelineItem[] = [
     level: "major",
     category: "talk",
   },
+  {
+    id: "2025-09-git-updates",
+    dateLabel: "Sep 2025",
+    dateISO: "2025-09-04",
+    title: "GitHub housekeeping & new repos",
+    subtitle: "Reorganizing repositories and showcasing work.",
+    description:
+      "Started reorganizing my GitHub adding new repositories, polishing existing code, and documenting projects to better showcase my work.",
+    tags: ["Git", "GitHub", "Updates"],
+    level: "major",
+    category: "project",
+  },
 ];
+
