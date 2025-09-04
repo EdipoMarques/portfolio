@@ -78,7 +78,7 @@ export const metadata = {
 
 export default function AboutPage() {
   const bio =
-    "Engineer who has worked with data management and classification in the real world. Proactive, committed to continuous learning and knowledge sharing, and open to embracing new technologies. Earlier I collaborated as a research assistant while completing a BSc in Industrial Engineering. I’m now focused on applying this toolkit in IT industry and create measurable impact";
+    "Software Engineer holding a Master’s degree, skilled in full-stack development, building scalable web applications, and applying data concepts to projects. Now focused on leveraging new technologies to generate value, drive positive impact, and tackle real-world problems.";
 
   return (
     <main className="mx-auto max-w-5xl px-6 pt-20 pb-24">
