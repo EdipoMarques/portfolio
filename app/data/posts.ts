@@ -55,6 +55,24 @@ export const posts: Post[] = [
     ]
   },
   {
+  slug: "prep-42-berlin-piscine-2025",
+  title: "Preparing for 42 Berlin — Piscine",
+  dateISO: "2025-09-20",
+  type: "milestone",
+  location: "Berlin, DE",
+  // opcional: adicione uma imagem em /public/posts/42-piscine.jpg
+  image: "/posts/42berlin.jpg",
+  excerpt:
+    "Starting an intensive prep sprint for the 42 Berlin Piscine: C fundamentals, algorithms, shell, Git and peer-learning habits.",
+  tags: ["C", "Algorithms", "Shell", "Git", "42 Berlin"],
+  content: [
+    "I’m entering a focused preparation phase for the 42 Berlin Piscine a month-long selection bootcamp. The goal: write clear C under time pressure, collaborate effectively, and build solid debugging and problem-solving routines.",
+    "Study plan at a glance: daily C katas (pointers, memory management, strings), data-structure exercises, Makefiles, and shell fundamentals. I’m also drilling tooling — gcc/clang, gdb, Valgrind, Git and practicing peer reviews to mirror the Piscine’s collaborative workflow.",
+    "Week rhythm: short problem sets during weekdays, longer challenges and mock exams on weekends, plus code clean-ups and documentation. I’ll share small takeaways along the way.",
+    "Outcome I’m aiming for: consistency, speed with correctness, and the ability to reason clearly under constraints the same skills I want to bring to real-world software teams."
+  ]
+},
+  {
   slug: "portfolio-launch-2025",
   title: "Portfolio website is live!",
   dateISO: "2025-06-25",
