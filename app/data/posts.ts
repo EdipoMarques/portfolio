@@ -22,7 +22,7 @@ export const posts: Post[] = [
     type: "milestone",
     tags: ["NLP", "MSc", "Python"],
     content: [
-      "I’ve just submitted my Master’s thesis on fake-news detection using NLP and deep learning. I built an end-to-end pipeline text cleaning, tokenization and sequence preparation feeding an LSTM classifier.",
+      "I have just submitted my Master’s thesis on fake-news detection using NLP and deep learning. I built an end-to-end pipeline text cleaning, tokenization and sequence preparation feeding an LSTM classifier.",
       "On a labeled news dataset, the model reached ~99% accuracy with precision/recall close to 1.0, indicating strong generalization for short statements and headlines. Beyond the metrics, the goal is practical: a lightweight, interpretable baseline to help journalists, moderators and researchers triage content before deeper fact-checking."
     ]
   },
