@@ -35,7 +35,7 @@ export default function AboutPage() {
     <main className="mx-auto max-w-3xl px-6 pt-20 pb-24">
       <h1 className="text-4xl font-bold">My journey</h1>
       <p className="mt-3 text-gray-600">
-        A quick look at my journey, studies, work and milestones. Major events
+        A quick look at mY journey, studies, work and milestones. Major events
         are highlighted; smaller events are shown as compact entries.
       </p>
 
